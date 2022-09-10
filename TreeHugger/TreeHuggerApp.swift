@@ -11,7 +11,7 @@ import SwiftUI
 struct TreeHuggerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TreeHuggerView()
         }
     }
 }

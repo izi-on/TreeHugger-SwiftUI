@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		52853FA028CD47C200462AA9 /* TreeHuggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853F9F28CD47C200462AA9 /* TreeHuggerApp.swift */; };
-		52853FA228CD47C200462AA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FA128CD47C200462AA9 /* ContentView.swift */; };
+		52853FA228CD47C200462AA9 /* TreeHuggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FA128CD47C200462AA9 /* TreeHuggerView.swift */; };
 		52853FA428CD47C300462AA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52853FA328CD47C300462AA9 /* Assets.xcassets */; };
 		52853FA728CD47C300462AA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52853FA628CD47C300462AA9 /* Preview Assets.xcassets */; };
 		52853FB128CD47C300462AA9 /* TreeHuggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FB028CD47C300462AA9 /* TreeHuggerTests.swift */; };
 		52853FBB28CD47C300462AA9 /* TreeHuggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FBA28CD47C300462AA9 /* TreeHuggerUITests.swift */; };
 		52853FBD28CD47C300462AA9 /* TreeHuggerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FBC28CD47C300462AA9 /* TreeHuggerUITestsLaunchTests.swift */; };
+		52853FCA28CD496000462AA9 /* BottomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FC928CD496000462AA9 /* BottomTabView.swift */; };
+		52853FCE28CD4B0300462AA9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52853FCD28CD4B0300462AA9 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		52853F9C28CD47C200462AA9 /* TreeHugger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreeHugger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52853F9F28CD47C200462AA9 /* TreeHuggerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeHuggerApp.swift; sourceTree = "<group>"; };
-		52853FA128CD47C200462AA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		52853FA128CD47C200462AA9 /* TreeHuggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeHuggerView.swift; sourceTree = "<group>"; };
 		52853FA328CD47C300462AA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52853FA628CD47C300462AA9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52853FAC28CD47C300462AA9 /* TreeHuggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TreeHuggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,9 @@
 		52853FB628CD47C300462AA9 /* TreeHuggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TreeHuggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52853FBA28CD47C300462AA9 /* TreeHuggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeHuggerUITests.swift; sourceTree = "<group>"; };
 		52853FBC28CD47C300462AA9 /* TreeHuggerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeHuggerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52853FC928CD496000462AA9 /* BottomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabView.swift; sourceTree = "<group>"; };
+		52853FCB28CD4B0200462AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		52853FCD28CD4B0300462AA9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52853FCE28CD4B0300462AA9 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +84,7 @@
 				52853FAF28CD47C300462AA9 /* TreeHuggerTests */,
 				52853FB928CD47C300462AA9 /* TreeHuggerUITests */,
 				52853F9D28CD47C200462AA9 /* Products */,
+				52853FCC28CD4B0300462AA9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,10 +101,12 @@
 		52853F9E28CD47C200462AA9 /* TreeHugger */ = {
 			isa = PBXGroup;
 			children = (
+				52853FCB28CD4B0200462AA9 /* Info.plist */,
 				52853F9F28CD47C200462AA9 /* TreeHuggerApp.swift */,
-				52853FA128CD47C200462AA9 /* ContentView.swift */,
+				52853FA128CD47C200462AA9 /* TreeHuggerView.swift */,
 				52853FA328CD47C300462AA9 /* Assets.xcassets */,
 				52853FA528CD47C300462AA9 /* Preview Content */,
+				52853FC928CD496000462AA9 /* BottomTabView.swift */,
 			);
 			path = TreeHugger;
 			sourceTree = "<group>";
@@ -125,6 +134,14 @@
 				52853FBC28CD47C300462AA9 /* TreeHuggerUITestsLaunchTests.swift */,
 			);
 			path = TreeHuggerUITests;
+			sourceTree = "<group>";
+		};
+		52853FCC28CD4B0300462AA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52853FCD28CD4B0300462AA9 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52853FA228CD47C200462AA9 /* ContentView.swift in Sources */,
+				52853FCA28CD496000462AA9 /* BottomTabView.swift in Sources */,
+				52853FA228CD47C200462AA9 /* TreeHuggerView.swift in Sources */,
 				52853FA028CD47C200462AA9 /* TreeHuggerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +438,7 @@
 				DEVELOPMENT_TEAM = QRBWL7FYG6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TreeHugger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +468,7 @@
 				DEVELOPMENT_TEAM = QRBWL7FYG6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TreeHugger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
