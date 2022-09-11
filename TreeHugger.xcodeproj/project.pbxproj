@@ -14,8 +14,9 @@
 		52853FB128CD47C300462AA9 /* TreeHuggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FB028CD47C300462AA9 /* TreeHuggerTests.swift */; };
 		52853FBB28CD47C300462AA9 /* TreeHuggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FBA28CD47C300462AA9 /* TreeHuggerUITests.swift */; };
 		52853FBD28CD47C300462AA9 /* TreeHuggerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FBC28CD47C300462AA9 /* TreeHuggerUITestsLaunchTests.swift */; };
-		52853FCA28CD496000462AA9 /* BottomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FC928CD496000462AA9 /* BottomTabView.swift */; };
 		52853FCE28CD4B0300462AA9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52853FCD28CD4B0300462AA9 /* MapKit.framework */; };
+		52853FD028CD4EFA00462AA9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FCF28CD4EFA00462AA9 /* MapView.swift */; };
+		52853FD228CD523200462AA9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FD128CD523200462AA9 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,9 +47,10 @@
 		52853FB628CD47C300462AA9 /* TreeHuggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TreeHuggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52853FBA28CD47C300462AA9 /* TreeHuggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeHuggerUITests.swift; sourceTree = "<group>"; };
 		52853FBC28CD47C300462AA9 /* TreeHuggerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeHuggerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		52853FC928CD496000462AA9 /* BottomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabView.swift; sourceTree = "<group>"; };
 		52853FCB28CD4B0200462AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		52853FCD28CD4B0300462AA9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		52853FCF28CD4EFA00462AA9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		52853FD128CD523200462AA9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +108,8 @@
 				52853FA128CD47C200462AA9 /* TreeHuggerView.swift */,
 				52853FA328CD47C300462AA9 /* Assets.xcassets */,
 				52853FA528CD47C300462AA9 /* Preview Content */,
-				52853FC928CD496000462AA9 /* BottomTabView.swift */,
+				52853FCF28CD4EFA00462AA9 /* MapView.swift */,
+				52853FD128CD523200462AA9 /* SettingsView.swift */,
 			);
 			path = TreeHugger;
 			sourceTree = "<group>";
@@ -274,7 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52853FCA28CD496000462AA9 /* BottomTabView.swift in Sources */,
+				52853FD028CD4EFA00462AA9 /* MapView.swift in Sources */,
+				52853FD228CD523200462AA9 /* SettingsView.swift in Sources */,
 				52853FA228CD47C200462AA9 /* TreeHuggerView.swift in Sources */,
 				52853FA028CD47C200462AA9 /* TreeHuggerApp.swift in Sources */,
 			);
@@ -439,6 +443,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TreeHugger/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to show it on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -469,6 +474,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TreeHugger/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to show it on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
