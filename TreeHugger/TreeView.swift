@@ -8,15 +8,34 @@
 import SwiftUI
 
 struct TreeView: View {
+    @Binding var treeData: TreeLocation
+    @Binding var selected: UUID
+    @State private var scale = 1.0
+    
     var body: some View {
-        Image("tree-hug")
-            .resizable()
-            .frame(width: 30, height: 30)
+        Button(action: {
+            //handle click animation
+            if selected == treeData.id {
+                scale -= 1
+                selected = UUID()
+            } else {
+                scale += 1
+                selected = treeData.id
+            }
+            
+        }) {
+            Image("tree-hug")
+                .resizable()
+                .frame(width: 30, height: 30)
+        }
+        .scaleEffect(scale)
+        .animation(.spring(), value: scale)
+        
     }
 }
 
 struct TreeView_Previews: PreviewProvider {
     static var previews: some View {
-        TreeView()
+        TreeView(treeData: .constant(TreeLocation(lat: 45.505, long: -73.5747)), selected: .constant(UUID()))
     }
 }
