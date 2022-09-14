@@ -7,6 +7,15 @@
 
 import Foundation
 
+struct TreeMessageBundle: Identifiable {
+    var id: UUID
+    var messages: [Message]
+    init(id: UUID, messages: [Message]) {
+        self.id = id
+        self.messages = messages
+    }
+}
+
 struct Message: Hashable {
     var content: String
     var user: User
