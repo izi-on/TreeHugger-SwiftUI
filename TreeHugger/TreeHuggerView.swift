@@ -11,16 +11,18 @@ import MapKit
 struct TreeHuggerView: View {
 
     var body: some View {
-        TabView {
-            MapView()
-                .tabItem {
-                    Label("Menu", systemImage: "map")
-                }
-            
-            SettingsView()
-                .tabItem {
-                    Label("Settings", systemImage: "gear")
-                }
+        HStack {
+            TabView {
+                MapView()
+                    .tabItem {
+                        Label("Menu", systemImage: "map")
+                    }
+                
+                SettingsView()
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
+            }
         }
     }
 }

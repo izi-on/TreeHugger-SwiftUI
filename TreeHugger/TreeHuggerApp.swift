@@ -10,8 +10,13 @@ import SwiftUI
 @main
 struct TreeHuggerApp: App {
     var body: some Scene {
+        let chatHelper = ChatHelper()
         WindowGroup {
-            TreeHuggerView()
+            NavigationView {
+                TreeHuggerView()
+            }
+            .environmentObject(chatHelper)
         }
     }
 }
+

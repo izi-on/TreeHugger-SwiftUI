@@ -19,7 +19,11 @@
 		52853FD228CD523200462AA9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FD128CD523200462AA9 /* SettingsView.swift */; };
 		52853FD428CEAA4B00462AA9 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FD328CEAA4B00462AA9 /* ContentViewModel.swift */; };
 		52853FD628CEB6D200462AA9 /* TreeLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FD528CEB6D200462AA9 /* TreeLocation.swift */; };
-		52853FD828CEBC6E00462AA9 /* TreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FD728CEBC6E00462AA9 /* TreeView.swift */; };
+		52853FDA28CFA9EC00462AA9 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FD928CFA9EB00462AA9 /* ChatView.swift */; };
+		52853FDD28CFB75100462AA9 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FDC28CFB75100462AA9 /* MessageModel.swift */; };
+		52853FDF28CFB80C00462AA9 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FDE28CFB80C00462AA9 /* MessageView.swift */; };
+		52853FE128CFB83000462AA9 /* ContentMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FE028CFB83000462AA9 /* ContentMessageView.swift */; };
+		52853FE328CFC1BA00462AA9 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52853FE228CFC1BA00462AA9 /* ChatModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +60,11 @@
 		52853FD128CD523200462AA9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		52853FD328CEAA4B00462AA9 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		52853FD528CEB6D200462AA9 /* TreeLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeLocation.swift; sourceTree = "<group>"; };
-		52853FD728CEBC6E00462AA9 /* TreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeView.swift; sourceTree = "<group>"; };
+		52853FD928CFA9EB00462AA9 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		52853FDC28CFB75100462AA9 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		52853FDE28CFB80C00462AA9 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		52853FE028CFB83000462AA9 /* ContentMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMessageView.swift; sourceTree = "<group>"; };
+		52853FE228CFC1BA00462AA9 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 		52853F9E28CD47C200462AA9 /* TreeHugger */ = {
 			isa = PBXGroup;
 			children = (
+				52853FDB28CFB6F200462AA9 /* Models */,
 				52853FCB28CD4B0200462AA9 /* Info.plist */,
 				52853F9F28CD47C200462AA9 /* TreeHuggerApp.swift */,
 				52853FA128CD47C200462AA9 /* TreeHuggerView.swift */,
@@ -116,9 +125,9 @@
 				52853FA528CD47C300462AA9 /* Preview Content */,
 				52853FCF28CD4EFA00462AA9 /* MapView.swift */,
 				52853FD128CD523200462AA9 /* SettingsView.swift */,
-				52853FD328CEAA4B00462AA9 /* ContentViewModel.swift */,
-				52853FD528CEB6D200462AA9 /* TreeLocation.swift */,
-				52853FD728CEBC6E00462AA9 /* TreeView.swift */,
+				52853FD928CFA9EB00462AA9 /* ChatView.swift */,
+				52853FDE28CFB80C00462AA9 /* MessageView.swift */,
+				52853FE028CFB83000462AA9 /* ContentMessageView.swift */,
 			);
 			path = TreeHugger;
 			sourceTree = "<group>";
@@ -154,6 +163,17 @@
 				52853FCD28CD4B0300462AA9 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52853FDB28CFB6F200462AA9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52853FD528CEB6D200462AA9 /* TreeLocation.swift */,
+				52853FDC28CFB75100462AA9 /* MessageModel.swift */,
+				52853FD328CEAA4B00462AA9 /* ContentViewModel.swift */,
+				52853FE228CFC1BA00462AA9 /* ChatModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,13 +306,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52853FE128CFB83000462AA9 /* ContentMessageView.swift in Sources */,
 				52853FD028CD4EFA00462AA9 /* MapView.swift in Sources */,
 				52853FD428CEAA4B00462AA9 /* ContentViewModel.swift in Sources */,
 				52853FD228CD523200462AA9 /* SettingsView.swift in Sources */,
 				52853FD628CEB6D200462AA9 /* TreeLocation.swift in Sources */,
+				52853FDF28CFB80C00462AA9 /* MessageView.swift in Sources */,
+				52853FDA28CFA9EC00462AA9 /* ChatView.swift in Sources */,
 				52853FA228CD47C200462AA9 /* TreeHuggerView.swift in Sources */,
-				52853FD828CEBC6E00462AA9 /* TreeView.swift in Sources */,
+				52853FDD28CFB75100462AA9 /* MessageModel.swift in Sources */,
 				52853FA028CD47C200462AA9 /* TreeHuggerApp.swift in Sources */,
+				52853FE328CFC1BA00462AA9 /* ChatModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
